@@ -1,0 +1,55 @@
+$gorko-colors: (
+  "dark": #1a1a1a,
+  "light": #f3f3f3
+);
+
+$light-colors: (
+  "text": map-get($gorko-colors, "dark"),
+  "bg": map-get($gorko-colors, "light")
+);
+
+$dark-colors: (
+  "text": map-get($gorko-colors, "light"),
+  "bg": map-get($gorko-colors, "dark")
+);
+
+$gorko-config: (
+  "css-vars": (
+    // "color": $light-colors, // 👋 Unless this enabled .color-* classes are not generated.
+    "themes":
+      (
+        "default": (
+          "tokens": (
+            "color": $light-colors
+          )
+        ),
+        "dark": (
+          "prefers-color-scheme": "dark",
+          "tokens": (
+            "color": $dark-colors
+          )
+        )
+      )
+  ),
+  "color": (
+    "items": "color",
+    "css-vars": true,
+    "output": "standard",
+    "property": "color"
+  ),
+  "width": (
+    "items": (
+      "full": "100%",
+      "half": "50%"
+    ),
+    "output": "standard",
+    "property": "width"
+  ),
+  "breakpoints": (
+    "sm": "(min-width: 36em)",
+    "md": "(min-width: 48em)",
+    "lg": "(min-width: 62em)"
+  )
+);
+
+@import "./node_modules/gorko/gorko.scss";

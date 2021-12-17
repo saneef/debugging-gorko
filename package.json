@@ -1,0 +1,16 @@
+{
+  "name": "debugging-gorko",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass main.scss:main.css"
+  },
+  "keywords": [],
+  "author": "Saneef Ansari <hello@saneef.com> (https://saneef.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "gorko": "^0.9.0",
+    "sass": "^1.45.0"
+  }
+}
